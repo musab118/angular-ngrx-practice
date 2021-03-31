@@ -15,21 +15,24 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import {MatCardModule } from "@angular/material/card"
-import { NoopAnimationsModule } from '@angular/platform-browser/animations'
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSelectModule } from '@angular/material/select'
+import { MatFormFieldModule} from '@angular/material/form-field'
+import {WeatherComponent } from './weather/weather.component'
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MyCounterComponent,
-    NavigationComponent
+    NavigationComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot({
-      count: counterReducer
-
+      count: counterReducer,
     }, {}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     LayoutModule,
@@ -39,7 +42,9 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations'
     MatIconModule,
     MatListModule,
     NoopAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule,
+    MatSelectModule
 
   ],
   providers: [],
