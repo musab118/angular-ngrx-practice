@@ -1,0 +1,17 @@
+<div class="card">
+  <mat-card>
+      <h3>Current Count: {{count$ | async}}</h3>
+      <button mat-button (click)="increment()">Increment Count</button>
+      <button mat-button (click)="decrement()" >Decrement Count</button>
+      <br>
+      <button mat-button (click)="incrementbyten()">Increment by 10</button>
+      <button mat-button (click)="decrementbyten()" >Decrement by 10</button>
+
+      <button mat-button (click)="reset()" >Reset Count</button>
+
+
+
+
+
+</mat-card>
+</div>
